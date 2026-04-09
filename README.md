@@ -12,10 +12,9 @@ to compare performance and give practical recommendations and implications. This
 
 Dataset from Kaggle. 
 The dataset used in this study is the [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection) from Kaggle.
+
 [![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue?style=flat&logo=kaggle)](https://www.kaggle.com/datasets/kartik2112/fraud-detection)
-
-
-
+Note: Due to file size limits, the raw dataset is not included in this repository. Please download it directly from the Kaggle link provided above.
 
 ---
 Machine Learning Model Building Pipeline including:
