@@ -70,7 +70,7 @@ This section prepares the data is ready before trainning model, start from Data 
 
 # **5.Model Trainning**
 This section presents the trainning of baseline and optimised model including;
-**Baseline Model**
+### **Baseline Model**
   **1. Random Forest (Baseline)**
     A random forest is an ensemble of decision trees, where each tree is trained on a random subset of data and features. The final prediction is made by aggregating (voting or averaging)   the results from all trees. It is advantageous to reduce overfitting with high accuracy and also provide feature importance scores for model optimisation. 
   **2. XGBoost (Baseline)**
@@ -78,7 +78,8 @@ This section presents the trainning of baseline and optimised model including;
   **3. CatBoost (Baseline)**
     CatBoost is an advanced gradient-boosting library specifically designed to address the challenges of handling categorical data in machine learning. CatBoost is an open-source technology that has become quite popular quickly because it can produce high-performance models without requiring a lot of data preprocessing including missing value and encoding.
 
-    After training the model, I improve model performance and address imbalance data by Feature Important and Stratified K-Fold and Hyperparameter Tuning. Feature Importance can measures how much each feature contributes to the model’s prediction accuracy. It helps in identifying the most influential input variables, improving performance, interpretability and computational efficiency. For hyperparameter tunning, RandomizedSearchCV is a machine-learning technique used to optimize a model's hyperparameters by performing a random search over a specified parameter grid. I started from
+After training the model, I improve model performance and address imbalance data by Feature Important and Stratified K-Fold and Hyperparameter Tuning. Feature Importance can measures how much each feature contributes to the model’s prediction accuracy. It helps in identifying the most influential input variables, improving performance, interpretability and computational efficiency. For hyperparameter tunning, RandomizedSearchCV is a machine-learning technique used to optimize a model's hyperparameters by performing a random search over a specified parameter grid. I started from
+    
    - Define Model: Choose the machine learning algorithm you want to optimize
    - Create the Parameter Grid: Specify the parameters and the range of values you want to search over.
    - Instantiate RandomizedSearchCV: Provide the model, parameter grid, and other settings like the number of iterations, cross-       validation strategy, etc.
@@ -86,6 +87,7 @@ This section presents the trainning of baseline and optimised model including;
    - Evaluate the Best Model: Check the performance of the best-found parameters.
 Therefore, this section present the optimised model as below;
 
+### **Optimised Model**
   **4. Random Forest (Optimised)**
     Apart from performing Feature Important and Stratified K-Fold and Hyperparameter Tuning. I use 'class_weight' to address class imbalance by assigning different levels of importance to each class during training. It helps the model avoid bias toward the majority class and improves performance on minority classes.
   **5. XGBoost (Optimised)**
@@ -95,6 +97,9 @@ Therefore, this section present the optimised model as below;
 <hr style="border: none; border-top: 5px double #333;">
 
 # **6. Model Evaluation**
+This section present model evaluation to select the best model performance. Then, I perform tunning threshold to improve model, which align a classifier’s predictions with specific business objectives.
+
+### **Model Performance Comparison**
 This section compare the model performance including Recall, Precision, F1 score, and  PR-AUC (Area Under the Precision-Recall Curve).
 The result as below;
 
@@ -116,7 +121,7 @@ The result as below;
   -  CatBoost (Optimized) reached the highest F1-score of 0.843. This confirms that it offers the best statistical balance between fraud detection and customer experience.
   -  The chart of the CatBoost optimised model stays closer to the top-right corner than any other model. It maintains a Precision near 1.0 even as Recall approaches 0.8. This indicates that the model can catch the vast majority of fraud without increasing false alerts.
 
-**Post-tuning the decision threshold**
+### **Post-tuning the decision threshold**
 Then, I perform threshold Tuning to align a classifier’s predictions with specific business objectives when false positives and false negatives carry different costs like fraud detection where missing fraud is worse than a false alarm. Threshold tuning is trying different cut points on the probability output, rather than accepting the default 0.5 probability cutoff. When you set the cutoff high, you make fewer positive calls and reduce false positives. If you set it low you catch more positives but invite more false alarms. The goal is pick the cutoff that minimizes the harm you care about.
 
 According to the confusion matrix;
@@ -134,7 +139,6 @@ According to the confusion matrix;
 
 I performed threshold tuning to align with a business strategy which prioritizes achieving the highest net savings based on our underlying business assumptions. Therefore, **I consider the cost and benefit from FP (False Alarm), FN (Missed Fraud), and TP(Caught Fraud).**
 
----
 
 **The Economic Impact Formula🧮**
 We define our success by the following profit-based metric:
