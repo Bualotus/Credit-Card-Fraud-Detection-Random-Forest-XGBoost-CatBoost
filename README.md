@@ -136,7 +136,7 @@ I performed threshold tuning to align with a business strategy which prioritizes
 
 ---
 
-### The Economic Impact Formula🧮 
+**The Economic Impact Formula🧮**
 We define our success by the following profit-based metric:
 
 > **Net Savings** = (Revenue Saved by Catching Fraud) − (Operational Cost from False Alarms) − (Money Lost from Missed Fraud)
@@ -145,13 +145,13 @@ $$Net\ Savings = (TP \times R_{TP}) + (TN \times R_{TP}) - (FP \times C_{FP}) - 
 
 
 
-### Variable Definitions🔍 
+**Variable Definitions🔍** 
 * **$R_{TP}$ (Reward per Caught Fraud):** The value saved by blocking a fraudulent charge. I assume operational savings is 50.00 dolloars per transaction.
 * **$R_{TN}$ (Reward per successful Payment):** the 2% fee represents the Reward per Successful Payment
 * **$C_{FP}$ (Cost per False Alarm):** The operational cost per alert (e.g., customer support time, SMS verification). I assume that operational cost is 10.00 dolloars per alert.
 * **$C_{FN}$ (Cost per Missed Fraud):** The actual financial loss from the stolen funds and chargebacks. The cost is calculated from the average monetary value of a fraudulent transaction.
 
-### Objective💡 
+**Objective💡** 
 
 The goal of post-tuning is to find the Optimal Threshold—the probability threshold that maximises our Net Savings by using TunedThresholdClassifierCV .
 
