@@ -13,7 +13,6 @@ to compare performance and give practical recommendations and implications. This
 Dataset from Kaggle. 
 The dataset used in this study is the [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection) from Kaggle.
 
-[![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue?style=flat&logo=kaggle)](https://www.kaggle.com/datasets/kartik2112/fraud-detection)
 Note: Due to file size limits, the raw dataset is not included in this repository. Please download it directly from the Kaggle link provided above.
 
 ---
@@ -40,6 +39,13 @@ Machine Learning Model Building Pipeline including:
 
 
 ---
+## 📂 Repository Structure
+* **`README.md`**: Provides a executive summary and business results.
+* **`Credit_Card_Fraud_Detection_Project.ipynb`**: Contains the complete end-to-end Python code
+* **`requirements.txt`**: List of necessary libraries to run the project.
+* **`.gitignore`**: Specifies which files and directories should be ignored by Git.
+---
+
 # **1.Problem Statement**
 Financial Fraud is still a significant global challenge and is increasing. Because advanced artificial intelligence is being used in fraud tactics, reshaping the contours of financial crime. While Artificial intelligence and machine learning have become significantly part of fraud detection to predict and indicate the fraudulent activity pattern. Credit card fraud is a type of financial fraud that involves the unauthorised use of a credit card to make fraudulent transactions. There are many machine learning algorithms to build a model for Credit card fraud detection as a detection control and develop for real-time fraud detection.
 
