@@ -2,18 +2,26 @@
 Machine learning models for Credit card fraud detection using  Random Forest, XGBoost, CatBoost  to compare performance and give practical recommendations and implications to accurately identifying fraudulent transactions and minimising false alarms with tuning the hyperparameter and the decision threshold.
 
 # **Project Overview**
+
+> **Objective:** 
 This project aims to build machine learning models for Credit card fraud detection using supervised learning models in different algorithms including 
 
 1) Random Forest
 2) XGBoost
 3) CatBoost 
 
-to compare performance and give practical recommendations and implications. This project presents how to address the imbalance in data, stop financial loss from fraudulent activities by accurately identifying fraudulent transactions and minimising false alarms with tuning the hyperparameter and the decision threshold.
+to compare performance and give practical recommendations and implications.
+
+> **Methodology:**
+
+This project presents how to address the imbalance in data, stop financial loss from fraudulent activities by accurately identifying fraudulent transactions and minimising false alarms with tuning the hyperparameter and the decision threshold based on the business strategies.
 
 Dataset from Kaggle. 
 The dataset used in this study is the [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection) from Kaggle.
-
 Note: Due to file size limits, the raw dataset is not included in this repository. Please download it directly from the Kaggle link provided above.
+
+
+> **Key Achievement:** Optimized CatBoost with Custom Threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and projected to save ~$1,313k per year (based on $525k savings from the test set period), significantly reducing financial loss while maintaining optimal customer experience.
 
 ---
 Machine Learning Model Building Pipeline including:
@@ -202,7 +210,7 @@ After perform tunning threshold, I found that the best threshold is 0.09 to gene
 <img width="421" height="332" alt="image" src="https://github.com/user-attachments/assets/55d567d2-18ff-453d-b7d7-f76aebd031c9" />
 
 
-After I have selected the Catboost optimised model as the best performing model. I perform tuning threshold based on the business assumption and found the best threshold at 0.09. By moving the threshold from 0.50 down to 0.09, we can increase the benefit by $42k from the same dataset. Moreover, the model tends to be highly sensitive, with the recall reaching 0.9. It means we can identify 90% of all fraud cases. While the precision is 0.57. Because the cost of a missed fraud (FN) is much higher than the cost of checking a good customer (FP). Therefore, the model prioritises to save the money from those extra caught frauds. Moreover, ROC AUC and Average Precision reach to 0.9974 and 0.9039, respectively. These scores confirm the high performance of model. 
+After I have selected the Catboost optimised model as the best performing model. I perform tuning threshold based on the business assumption and found the best threshold at 0.09. By moving the threshold from 0.50 down to 0.09, we can increase the benefit by $42k from the same dataset. ( from $482,895.77 ( baseline) to $525,154.31 (tuning threshold))  Moreover, the model tends to be highly sensitive, with the recall reaching 0.9. It means we can identify 90% of all fraud cases. While the precision is 0.57. Because the cost of a missed fraud (FN) is much higher than the cost of checking a good customer (FP). Therefore, the model prioritises to save the money from those extra caught frauds. Moreover, ROC AUC and Average Precision reach to 0.9974 and 0.9039, respectively. These scores confirm the high performance of model. 
 
 However, the optimised threshold can vary based on the business strategy. Therefore, we should reconsider and monitor the assumption of the model regulary. 
 
