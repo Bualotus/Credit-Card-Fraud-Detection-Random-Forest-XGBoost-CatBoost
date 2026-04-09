@@ -3,11 +3,13 @@ Machine learning models for Credit card fraud detection using  Random Forest, XG
 
 # **Project Overview**
 
-> **Objective:** 
+> **Objective:**
+
 This project aims to build machine learning models for Credit card fraud detection using supervised learning models in different algorithms including 
 1) Random Forest
 2) XGBoost
-3) CatBoost 
+3) CatBoost
+
 to compare performance and give practical recommendations and implications.
 
 > **Methodology:**
@@ -21,7 +23,7 @@ Note: Due to file size limits, the raw dataset is not included in this repositor
 
 > **Key Achievement:**
 
-Optimized CatBoost with Custom Threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and **projected to save ~$1,313k per year** (based on $525k savings from the test set period),   significantly reducing financial loss while maintaining optimal customer experience.
+Optimized CatBoost with custom threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and **projected to save ~$1,313k per year** (based on $525k savings from the test set period),   significantly reducing financial loss while maintaining optimal customer experience.
 
 ---
 Machine Learning Model Building Pipeline including:
