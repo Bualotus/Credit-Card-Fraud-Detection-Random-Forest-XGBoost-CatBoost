@@ -80,6 +80,8 @@ This section presents the trainning of baseline and optimised model including;
   **3. CatBoost (Baseline)**
     CatBoost is an advanced gradient-boosting library specifically designed to address the challenges of handling categorical data in machine learning. CatBoost is an open-source technology that has become quite popular quickly because it can produce high-performance models without requiring a lot of data preprocessing including missing value and encoding.
 
+### **Optimised Model**
+
 After training the model, I improve model performance and address imbalance data by Feature Important and Stratified K-Fold and Hyperparameter Tuning. Feature Importance can measures how much each feature contributes to the model’s prediction accuracy. It helps in identifying the most influential input variables, improving performance, interpretability and computational efficiency. For hyperparameter tunning, RandomizedSearchCV is a machine-learning technique used to optimize a model's hyperparameters by performing a random search over a specified parameter grid. I started from
     
    - Define Model: Choose the machine learning algorithm you want to optimize
@@ -87,9 +89,8 @@ After training the model, I improve model performance and address imbalance data
    - Instantiate RandomizedSearchCV: Provide the model, parameter grid, and other settings like the number of iterations, cross-       validation strategy, etc.
    - Fit the Model: Run the random search on the training data.
    - Evaluate the Best Model: Check the performance of the best-found parameters.
+     
 Therefore, this section present the optimised model as below;
-
-### **Optimised Model**
 
   **4. Random Forest (Optimised)**
     Apart from performing Feature Important and Stratified K-Fold and Hyperparameter Tuning. I use 'class_weight' to address class imbalance by assigning different levels of importance to each class during training. It helps the model avoid bias toward the majority class and improves performance on minority classes.
@@ -109,15 +110,20 @@ This section compare the model performance including Recall, Precision, F1 score
 The result as below;
 
   **Recall🎣** 
-  <img width="927" height="556" alt="image" src="https://github.com/user-attachments/assets/228e66f5-32fd-4f09-9ef6-9af252336acd" />
+  
+  <img width="995" height="595" alt="image" src="https://github.com/user-attachments/assets/d97482ae-c662-4321-ae93-70c4cb84c7f7" />
+
   
   **Precision🎯**
+  
   <img width="932" height="555" alt="image" src="https://github.com/user-attachments/assets/86ae4086-881e-4ffb-8ac6-f8c032f5799c" />
 
   **F1-Score⚖️**
+  
   <img width="928" height="551" alt="image" src="https://github.com/user-attachments/assets/d8dbee60-f605-454f-8ebe-5346e5cd89fc" />
 
   **PR-AUC📈**
+  
   <img width="1746" height="522" alt="image" src="https://github.com/user-attachments/assets/8f8294f9-7a22-4094-ba7b-a9f24fde54a2" />
 
   After comparing the model performance, I selected the optimised model of Catboost as the best-performing model for credit card fraud detection according to the observation as below;
@@ -165,10 +171,12 @@ $$Net\ Savings = (TP \times R_{TP}) + (TN \times R_{TP}) - (FP \times C_{FP}) - 
 The goal of post-tuning is to find the Optimal Threshold—the probability threshold that maximises our Net Savings by using TunedThresholdClassifierCV .
 
 **Result⚡** 
+
 After perform tunning threshold, I found that the best threshold is 0.09 to generate maximum net saving.
 
 
 ### **Final Evaluation**
+
 
 <img width="421" height="332" alt="image" src="https://github.com/user-attachments/assets/55d567d2-18ff-453d-b7d7-f76aebd031c9" />
 
