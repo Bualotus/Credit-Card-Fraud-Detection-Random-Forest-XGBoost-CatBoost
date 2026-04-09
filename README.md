@@ -73,8 +73,10 @@ This section presents the trainning of baseline and optimised model including;
 ### **Baseline Model**
   **1. Random Forest (Baseline)**
     A random forest is an ensemble of decision trees, where each tree is trained on a random subset of data and features. The final prediction is made by aggregating (voting or averaging)   the results from all trees. It is advantageous to reduce overfitting with high accuracy and also provide feature importance scores for model optimisation. 
+    
   **2. XGBoost (Baseline)**
     XGBoost is a gradient boosting algorithm, which is designed to be highly efficient, flexible and portable.  It is an optimized gradient boosting algorithm that combines multiple weak    models into a stronger, high-performance model by using decision trees as base learners, building them sequentially so each tree corrects errors from the previous one and it is known as boosting. Moreover, It features parallel processing for faster training on large datasets and allows parameter customisation to optimize performance for specific problems.
+    
   **3. CatBoost (Baseline)**
     CatBoost is an advanced gradient-boosting library specifically designed to address the challenges of handling categorical data in machine learning. CatBoost is an open-source technology that has become quite popular quickly because it can produce high-performance models without requiring a lot of data preprocessing including missing value and encoding.
 
@@ -88,10 +90,13 @@ After training the model, I improve model performance and address imbalance data
 Therefore, this section present the optimised model as below;
 
 ### **Optimised Model**
+
   **4. Random Forest (Optimised)**
     Apart from performing Feature Important and Stratified K-Fold and Hyperparameter Tuning. I use 'class_weight' to address class imbalance by assigning different levels of importance to each class during training. It helps the model avoid bias toward the majority class and improves performance on minority classes.
+    
   **5. XGBoost (Optimised)**
     I used 'scale_pos_weight'as a hyperparameter used to address class imbalance.
+    
   **6. XGBoost (Optimised)** 
     I used 'scale_pos_weight'as a hyperparameter used to address class imbalance.
 <hr style="border: none; border-top: 5px double #333;">
@@ -125,10 +130,10 @@ The result as below;
 Then, I perform threshold Tuning to align a classifier’s predictions with specific business objectives when false positives and false negatives carry different costs like fraud detection where missing fraud is worse than a false alarm. Threshold tuning is trying different cut points on the probability output, rather than accepting the default 0.5 probability cutoff. When you set the cutoff high, you make fewer positive calls and reduce false positives. If you set it low you catch more positives but invite more false alarms. The goal is pick the cutoff that minimizes the harm you care about.
 
 According to the confusion matrix;
-| | Predict Negative | Predict Positive |
-|---|:---:|:---:|
-| **Actual Negative** | **TN** (True Negative) | **FP** (False Positive) |
-| **Actual Positive** | **FN** (False Negative) | **TP** (True Positive) |
+          | | Predict Negative | Predict Positive |
+          |---|:---:|:---:|
+          | **Actual Negative** | **TN** (True Negative) | **FP** (False Positive) |
+          | **Actual Positive** | **FN** (False Negative) | **TP** (True Positive) |
 
 **Where:**
 * **$TN$ (True Negative):** Legitimate transactions correctly identified ✅
@@ -159,7 +164,20 @@ $$Net\ Savings = (TP \times R_{TP}) + (TN \times R_{TP}) - (FP \times C_{FP}) - 
 
 The goal of post-tuning is to find the Optimal Threshold—the probability threshold that maximises our Net Savings by using TunedThresholdClassifierCV .
 
----
+**Result⚡** 
+After perform tunning threshold, I found that the best threshold is 0.09 to generate maximum net saving.
+
+
+### **Final Evaluation**
+
+<img width="421" height="332" alt="image" src="https://github.com/user-attachments/assets/55d567d2-18ff-453d-b7d7-f76aebd031c9" />
+
+
+After I have selected the Catboost optimised model as the best performing model. I perform tuning threshold based on the business assumption and found the best threshold at 0.09. By moving the threshold from 0.50 down to 0.09, we can increase the benefit by $42k from the same dataset. Moreover, the model tends to be highly sensitive, with the recall reaching 0.9. It means we can identify 90% of all fraud cases. While the precision is 0.57. Because the cost of a missed fraud (FN) is much higher than the cost of checking a good customer (FP). Therefore, the model prioritises to save the money from those extra caught frauds. Moreover, ROC AUC and Average Precision reach to 0.9974 and 0.9039, respectively. These scores confirm the high performance of model. 
+
+However, the optimised threshold can vary based on the business strategy. Therefore, we should reconsider and monitor the assumption of the model regulary. 
+
+<hr style="border: none; border-top: 5px double #333;">
 
   
 
