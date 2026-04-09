@@ -19,8 +19,14 @@ Machine Learning Model Building Pipeline including:
 **I developed this project to practice data analytics skill and learning machine learning. If you have any suggestions or feedback, I would be very thank you for your help to improve my project and skills 😊.**
 
 ---
-# **Table of Content**
-
+# 📑 Table of Contents
+* [📌 Problem Statement](#Problem-Statement)
+* [📊 Dataset](#dataset)
+* [🛠️ Technologies Used](#technologies-used)
+* [🧪 Model Development](#model-development)
+* [🏆 Results & Comparison](#results--comparison)
+* [🎯 Best Threshold Analysis](#best-threshold-analysis)
+* [📚 References](#references)
 
 
 
@@ -65,11 +71,11 @@ After explore data, I will prepare the features as follows
 
 # **4.Data Preprocessing**
 
-This section prepares the data is ready before trainning model, start from Data Asssessment to examine data to determine its quality, Data Cleaning for handling missing value and duplicate value, Data Transformation for feature extraction and encoding, Data Reduction for Dropping Columns that are Unique Identifiers and unnecessary data, and Split data set to split data into trainning, validation and test set.
+This section prepares the data is ready before training model, start from Data Assessment to examine data to determine its quality, Data Cleaning for handling missing value and duplicate value, Data Transformation for feature extraction and encoding, Data Reduction for Dropping Columns that are Unique Identifiers and unnecessary data, and Split data set to split data into training, validation and test set.
 <hr style="border: none; border-top: 5px double #333;">
 
-# **5.Model Trainning**
-This section presents the trainning of baseline and optimised model including;
+# **5.Model Training**
+This section presents the training of baseline and optimised model including;
 ### **Baseline Model**
   **1. Random Forest (Baseline)**
     A random forest is an ensemble of decision trees, where each tree is trained on a random subset of data and features. The final prediction is made by aggregating (voting or averaging)   the results from all trees. It is advantageous to reduce overfitting with high accuracy and also provide feature importance scores for model optimisation. 
@@ -98,7 +104,7 @@ Therefore, this section present the optimised model as below;
   **5. XGBoost (Optimised)**
     I used 'scale_pos_weight'as a hyperparameter used to address class imbalance.
     
-  **6. XGBoost (Optimised)** 
+  **6. CatBoost (Optimised)** 
     I used 'scale_pos_weight'as a hyperparameter used to address class imbalance.
 <hr style="border: none; border-top: 5px double #333;">
 
@@ -193,9 +199,43 @@ This select include Deployment Strategy and Model Monitoring & Maintenance to en
   
 <hr style="border: none; border-top: 5px double #333;">
   
- 
+ # **Reference**
 
+ Ashington. (2025). ML system design for fraud detection in real-time. Medium. https://ashington.medium.com/ml-system-design-for-fraud-detection-in-real-time-cef7c5526899
 
+Chandrasekaran, C. (n.d.). EDA for a classification problem. Deepnote. https://deepnote.com/app/charan-chandrasekaran/EDA-for-Classification-problem-df3d55a6-09d3-48ec-8aca-d039a4b5ff5a
+
+Coursera. (2025). Data preprocessing steps: How to prepare data for machine learning and analytics. https://www.coursera.org/articles/data-preprocessing-steps
+
+GeeksforGeeks. (2022). Haversine formula to find the distance between two points on a sphere. https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/
+
+GeeksforGeeks. (2025). Label encoding of datasets in python. https://www.geeksforgeeks.org/ml-label-encoding-of-datasets-in-python/
+
+GeeksforGeeks. (2026). Random Forest algorithm in machine learning. https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/
+
+GeeksforGeeks. (2025). What is feature engineering? https://www.geeksforgeeks.org/what-is-feature-engineering/
+
+GeeksforGeeks. (2026). XGBoost. https://www.geeksforgeeks.org/xgboost/
+
+Olaniyan, B. (2025). Sklearn vs. Imblearn pipeline: Preventing data leakage in imbalanced datasets. Medium. https://medium.com/@banjiolaniyan123/sklearn-vs-imblearn-pipeline-preventing-data-leakage-in-imbalanced-datasets-b4272484e985
+
+Pykes, K. (2025). Data preprocessing: A complete guide with Python examples. DataCamp. https://www.datacamp.com/blog/data-preprocessing
+
+Sanjay V. (2024). What is EDA? Medium. https://medium.com/@sanjayskumar4010/what-is-eda-1abdae6409bf
+
+Scikit-learn. (n.d.). Metrics and scoring: Quantifying the quality of predictions. https://scikit-learn.org/stable/modules/model_evaluation.html#scoring-string-names
+
+Scikit-learn. (n.d.). Post-tuning the decision threshold for cost-sensitive learning. https://scikit-learn.org/stable/auto_examples/model_selection/plot_cost_sensitive_learning.html
+
+Shenoy, K. (2020). Credit card transactions fraud detection dataset [Data set]. Kaggle. https://www.kaggle.com/datasets/kartik2112/fraud-detection
+
+Stack Overflow. (2016). How to tune parameters in random forest using scikit-learn. https://stackoverflow.com/questions/36107820/how-to-tune-parameters-in-random-forest-using-scikit-learn
+
+Talent500. (n.d.). Feature engineering: Creating new features to enhance model performance. https://talent500.com/blog/feature-engineering-creating-new-features-to-enhance-model-performance/
+
+Verzi, V. (2025). Understanding model evaluation metrics in fraud detection: Beyond accuracy. Medium. https://medium.com/@valeria.verzi1/understanding-model-evaluation-metrics-in-fraud-detection-beyond-accuracy-52b224ac0418
+
+<hr style="border: none; border-top: 5px double #333;">
 
 
 
