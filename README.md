@@ -105,7 +105,7 @@ Therefore, this section present the optimised model as below;
 # **6. Model Evaluation**
 This section present model evaluation to select the best model performance. Then, I perform tunning threshold to improve model, which align a classifier’s predictions with specific business objectives.
 
-### **Model Performance Comparison**
+## **Model Performance Comparison**
 This section compare the model performance including Recall, Precision, F1 score, and  PR-AUC (Area Under the Precision-Recall Curve).
 The result as below;
 
@@ -132,14 +132,14 @@ The result as below;
   -  CatBoost (Optimized) reached the highest F1-score of 0.843. This confirms that it offers the best statistical balance between fraud detection and customer experience.
   -  The chart of the CatBoost optimised model stays closer to the top-right corner than any other model. It maintains a Precision near 1.0 even as Recall approaches 0.8. This indicates that the model can catch the vast majority of fraud without increasing false alerts.
 
-### **Post-tuning the decision threshold**
+## **Post-tuning the decision threshold**
 Then, I perform threshold Tuning to align a classifier’s predictions with specific business objectives when false positives and false negatives carry different costs like fraud detection where missing fraud is worse than a false alarm. Threshold tuning is trying different cut points on the probability output, rather than accepting the default 0.5 probability cutoff. When you set the cutoff high, you make fewer positive calls and reduce false positives. If you set it low you catch more positives but invite more false alarms. The goal is pick the cutoff that minimizes the harm you care about.
 
 According to the confusion matrix;
-          | | Predict Negative | Predict Positive |
-          |---|:---:|:---:|
-          | **Actual Negative** | **TN** (True Negative) | **FP** (False Positive) |
-          | **Actual Positive** | **FN** (False Negative) | **TP** (True Positive) |
+| | Predict Negative | Predict Positive |
+|---|:---:|:---:|
+| **Actual Negative** | **TN** (True Negative) | **FP** (False Positive) |
+| **Actual Positive** | **FN** (False Negative) | **TP** (True Positive) |     
 
 **Where:**
 * **$TN$ (True Negative):** Legitimate transactions correctly identified ✅
@@ -175,7 +175,7 @@ The goal of post-tuning is to find the Optimal Threshold—the probability thres
 After perform tunning threshold, I found that the best threshold is 0.09 to generate maximum net saving.
 
 
-### **Final Evaluation**
+## **Final Evaluation**
 
 
 <img width="421" height="332" alt="image" src="https://github.com/user-attachments/assets/55d567d2-18ff-453d-b7d7-f76aebd031c9" />
@@ -187,8 +187,11 @@ However, the optimised threshold can vary based on the business strategy. Theref
 
 <hr style="border: none; border-top: 5px double #333;">
 
-  
+# **7. Model Deployment**
 
+This select include Deployment Strategy and Model Monitoring & Maintenance to ensure the fraud detection system must be implemented and monitored continuously.
+  
+<hr style="border: none; border-top: 5px double #333;">
   
  
 
