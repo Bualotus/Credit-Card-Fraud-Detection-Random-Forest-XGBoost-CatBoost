@@ -17,7 +17,7 @@ to compare performance and give practical recommendations and implications.
 This project presents how to address the imbalance in data, stop financial loss from fraudulent activities by accurately identifying fraudulent transactions and minimising false alarms with tuning the hyperparameter and the decision threshold based on the business strategies.
 
 Dataset from Kaggle. 
-The dataset used in this study is the [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection) from Kaggle.
+The dataset used in this study is the [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection) 
 Note: Due to file size limits, the raw dataset is not included in this repository. Please download it directly from the Kaggle link provided above.
 
 
