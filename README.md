@@ -48,7 +48,7 @@ The dataset used in this study is “Credit Card Transactions Fraud Detection Da
 <hr style="border: none; border-top: 5px double #333;">
 
 # **3.Data Exploration**
-This section will present Data overview, Descriptive Statistic, and Vistualisation to highlight the relationship between feature and target class and imblance data.
+This section will present Data overview, Descriptive Statistic, and Visualization to highlight the relationship between feature and target class and imblanced data.
 After explore data, I will prepare the features as follows
 
 | No. | Feature | Description and Strategy for Data Preprocessing |
@@ -170,9 +170,9 @@ $$Net\ Savings = (TP \times R_{TP}) + (TN \times R_{TP}) - (FP \times C_{FP}) - 
 
 
 **Variable Definitions🔍** 
-* **$R_{TP}$ (Reward per Caught Fraud):** The value saved by blocking a fraudulent charge. I assume operational savings is 50.00 dolloars per transaction.
+* **$R_{TP}$ (Reward per Caught Fraud):** The value saved by blocking a fraudulent charge. I assume operational savings is 50.00 dollars per transaction.
 * **$R_{TN}$ (Reward per successful Payment):** the 2% fee represents the Reward per Successful Payment
-* **$C_{FP}$ (Cost per False Alarm):** The operational cost per alert (e.g., customer support time, SMS verification). I assume that operational cost is 10.00 dolloars per alert.
+* **$C_{FP}$ (Cost per False Alarm):** The operational cost per alert (e.g., customer support time, SMS verification). I assume that operational cost is 10.00 dollars per alert.
 * **$C_{FN}$ (Cost per Missed Fraud):** The actual financial loss from the stolen funds and chargebacks. The cost is calculated from the average monetary value of a fraudulent transaction.
 
 **Objective💡** 
