@@ -20,14 +20,17 @@ Machine Learning Model Building Pipeline including:
 
 ---
 # 📑 Table of Contents
-* [📌 Problem Statement](#Problem-Statement)
-* [📊 Dataset](#dataset)
-* [🛠️ Technologies Used](#technologies-used)
-* [🧪 Model Development](#model-development)
-* [🏆 Results & Comparison](#results--comparison)
-* [🎯 Best Threshold Analysis](#best-threshold-analysis)
-* [📚 References](#references)
-
+* [📌 1. Problem Statement](#1problem-statement)
+* [📊 2. Data Collection](#2data-collection)
+* [🔍 3. Data Exploration](#3data-exploration)
+* [🛠️ 4. Data Preprocessing](#4data-preprocessing)
+* [🧪 5. Model Training](#5model-training)
+* [🏆 6. Model Evaluation](#6-model-evaluation)
+    * [Model Performance Comparison](#model-performance-comparison)
+    * [Post-tuning the decision threshold](#post-tuning-the-decision-threshold)
+    * [Final Evaluation](#final-evaluation)
+* [🚀 7. Model Deployment](#7-model-deployment)
+* [📚 Reference](#reference)
 
 
 ---
