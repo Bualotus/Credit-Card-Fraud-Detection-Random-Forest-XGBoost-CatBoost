@@ -10,7 +10,7 @@ This project aims to build machine learning models for Credit card fraud detecti
 2) XGBoost
 3) CatBoost 
 
-to compare performance and give practical recommendations and implications.
+  to compare performance and give practical recommendations and implications.
 
 > **Methodology:**
 
@@ -21,7 +21,7 @@ The dataset used in this study is the [Credit Card Transactions Fraud Detection 
 Note: Due to file size limits, the raw dataset is not included in this repository. Please download it directly from the Kaggle link provided above.
 
 
-> **Key Achievement:** Optimized CatBoost with Custom Threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and projected to save ~$1,313k per year (based on $525k savings from the test set period), significantly reducing financial loss while maintaining optimal customer experience.
+> **Key Achievement:** Optimized CatBoost with Custom Threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and **projected to save ~$1,313k per year** (based on $525k savings from the test set period),   significantly reducing financial loss while maintaining optimal customer experience.
 
 ---
 Machine Learning Model Building Pipeline including:
