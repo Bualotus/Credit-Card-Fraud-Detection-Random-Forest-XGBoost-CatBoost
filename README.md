@@ -24,7 +24,7 @@ Note: Due to file size limits, the raw dataset is not included in this repositor
 
 > **Key Achievement:**
 
-Optimized CatBoost with custom threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and **projected to save ~$1,313k per year** (based on $525k savings from the test set period),   significantly reducing financial loss while maintaining optimal customer experience.
+Optimized CatBoost with custom threshold (0.09) as the best model to identify **90% of fraud cases** (Recall 0.9) and **projected to save ~$1.3M per year** (based on $0.5M savings from the test set period),   significantly reducing financial loss while maintaining optimal customer experience.
 
 ---
 Machine Learning Model Building Pipeline including:
