@@ -29,7 +29,7 @@ Optimized CatBoost with custom threshold (0.09) as the best model to identify **
 ---
 Machine Learning Model Building Pipeline including:
 
-<img width="1923" height="475" alt="Credit Card Fraud Detection End-to End Process" src="https://github.com/user-attachments/assets/d101e467-3a87-4e6c-8b99-c930b0d98592" />
+<img width="1923" height="475" alt="Credit_Card_Fraud_Detection_Project" src="https://github.com/user-attachments/assets/0dfca198-5113-4fce-a55a-d301ac4a2610" />
 
 
 **I developed this project to practice data analytics skill and learning machine learning. If you have any suggestions or feedback, I would be very thank you for your help to improve my project and skills 😊.**
